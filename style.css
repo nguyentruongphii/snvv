@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-pink: #feecea;
+  --color-white: #fff;
+  --color-black: #333;
+  --color-text-pink: #ff7882;
+  --color-heart: #f61f1f;
+  --color-bg-letter: #fff8e4;
+  --color-border: #daccbf;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Sriracha', cursive;
+  background-image: linear-gradient(180deg, var(--color-pink) 0%, #ffe3dd 100%);
+  color: var(--color-black);
+}
+
+#wrapper {
+  min-height: 100vh;
+  padding: 2rem 1.5rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.flag__birthday {
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-40px);
+  animation: translateYFlag 1.2s ease forwards;
+}
+
+@keyframes translateYFlag {
+  from { transform: translateY(-120px); }
+  to { transform: translateY(-10px); }
+}
+
+.flag__birthday img {
+  width: 320px;
+  max-width: 45%;
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 1.5rem;
+}
+
+.content .left,
+.content .right {
+  flex: 1 1 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Titan One', sans-serif;
+}
+
+.title .happy,
+.title .birthday {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.title .happy {
+  color: var(--color-white);
+  text-shadow: 4px 4px var(--color-black);
+  font-size: clamp(3rem, 5vw, 5rem);
+}
+
+.title .birthday {
+  color: var(--color-text-pink);
+  text-shadow: 3px 3px rgba(0,0,0,0.15);
+  font-size: clamp(2.5rem, 4vw, 4rem);
+}
+
+.title span {
+  display: inline-flex;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: txtTranslateY 0.5s ease forwards;
+}
+
+.title span:nth-child(1) { animation-delay: 4s; }
+.title span:nth-child(2) { animation-delay: 4.2s; }
+.title span:nth-child(3) { animation-delay: 4.4s; }
+.title span:nth-child(4) { animation-delay: 4.6s; }
+.title span:nth-child(5) { animation-delay: 4.8s; }
+
+.title .birthday span:nth-child(1) { animation-delay: 5s; }
+.title .birthday span:nth-child(2) { animation-delay: 5.2s; }
+.title .birthday span:nth-child(3) { animation-delay: 5.4s; }
+.title .birthday span:nth-child(4) { animation-delay: 5.6s; }
+.title .birthday span:nth-child(5) { animation-delay: 5.8s; }
+.title .birthday span:nth-child(6) { animation-delay: 6s; }
+.title .birthday span:nth-child(7) { animation-delay: 6.2s; }
+.title .birthday span:nth-child(8) { animation-delay: 6.4s; }
+
+@keyframes txtTranslateY {
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.title .hat {
+  position: absolute;
+  top: -2.5rem;
+  right: -4rem;
+  width: 100px;
+  transform: rotate(-20deg);
+}
+
+.title .hat img {
+  width: 100%;
+  display: block;
+}
+
+.date__of__birth,
+.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-text-pink);
+  border: 3px solid var(--color-black);
+  border-radius: 50px;
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  letter-spacing: 0.08em;
+}
+
+.btn {
+  margin-top: 2rem;
+}
+
+#btn__letter {
+  background: var(--color-text-pink);
+  color: #fff;
+  border: 3px solid var(--color-black);
+  padding: 0.9rem 1.4rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Sriracha', cursive;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+#btn__letter:hover {
+  background: var(--color-heart);
+  transform: scale(1.05);
+}
+
+#btn__letter i {
+  margin-left: 0.5rem;
+}
+
+#btn__letter:hover i {
+  animation: rotateHeart 1s infinite linear;
+}
+
+@keyframes rotateHeart {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(10deg); }
+}
+
+.box__account {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255,255,255,0.9);
+  border: 3px solid var(--color-black);
+  border-radius: 35px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+  padding: 1.5rem;
+  position: relative;
+}
+
+.box__account .image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.box__account .image img {
+  width: 240px;
+  max-width: 100%;
+  border-radius: 25px;
+  border: 6px solid #fff;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.18);
+}
+
+.name {
+  margin-top: 0.5rem;
+}
+
+.balloon_one,
+.balloon_two,
+.decorate_flower--one,
+.decorate_flower--two,
+.decorate_flower--three,
+.decorate_bottom,
+.smiley__icon {
+  position: absolute;
+}
+
+.balloon_one { top: 1rem; left: 1rem; }
+.balloon_two { top: 2rem; right: 1rem; }
+
+.balloon_one img,
+.balloon_two img,
+.decorate_flower--one img,
+.decorate_flower--two img,
+.decorate_flower--three img,
+.decorate_bottom img,
+.smiley__icon img {
+  display: block;
+}
+
+.cricle {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(255,255,255,0.8);
+  border: 2px dashed var(--color-black);
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.text__cricle {
+  display: grid;
+  grid-template-columns: repeat(8, auto);
+  gap: 0.2rem;
+  justify-content: center;
+  align-items: center;
+  text-transform: lowercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+}
+
+.text__cricle span {
+  font-size: 0.9rem;
+}
+
+.cricle i {
+  position: absolute;
+  bottom: 1rem;
+  color: var(--color-heart);
+  font-size: 1.2rem;
+}
+
+.day,
+.month {
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--color-black);
+}
+
+.decorate_star {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: radial-gradient(circle, #fff 0%, var(--color-text-pink) 80%);
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.7);
+}
+
+.star1 { top: 6rem; left: 8rem; }
+.star2 { top: 8rem; right: 8rem; }
+.star3 { top: 14rem; left: 3rem; }
+.star4 { top: 18rem; right: 4rem; }
+.star5 { top: 22rem; left: 12rem; }
+
+.decorate_flower--one { top: 18rem; left: 40%; }
+.decorate_flower--two { top: 24rem; left: 72%; }
+.decorate_flower--three { top: 30rem; left: 15%; }
+
+.decorate_bottom { bottom: 1rem; right: 2rem; }
+.smiley__icon { bottom: 2rem; left: 3rem; }
+
+.box__letter {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .box__account {
+    max-width: 100%;
+  }
+
+  .title .happy,
+  .title .birthday {
+    font-size: 2.5rem;
+  }
+}
